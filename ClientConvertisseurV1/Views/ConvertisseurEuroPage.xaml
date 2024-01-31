@@ -12,7 +12,7 @@
     <RelativePanel>
         <TextBlock
             Name="tbEuroMontant"
-            Margin="0,10,0,10"
+            Margin="0,30,0,10"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
             Text="Montant en Euros" />
         <TextBox
@@ -20,7 +20,8 @@
             MinWidth="150"
             Margin="0,10,0,10"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
-            RelativePanel.Below="tbEuroMontant" />
+            RelativePanel.Below="tbEuroMontant"
+            Text="{Binding Path=TxEuros, Mode=TwoWay}" />
         <TextBlock
             Name="tbDevise"
             Margin="0,10,0,10"
@@ -30,14 +31,15 @@
         <ComboBox
             Name="cbDevise"
             Margin="0,10,0,10"
+            ItemsSource="{Binding Devises}"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
             RelativePanel.Below="tbDevise"
-            ItemsSource="{Binding Devises}"
-            SelectedItem="{Binding Path=DeviseSelectionnee}"/>
-            
+            SelectedItem="{Binding Path=DeviseSelectionnee, Mode=TwoWay}" />
+
         <Button
             Name="btConvertir"
             Margin="0,10,0,10"
+            Click="btConvertirClick"
             Content="Convertir"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
             RelativePanel.Below="cbDevise" />
@@ -53,7 +55,8 @@
             Margin="0,10,0,10"
             IsReadOnly="True"
             RelativePanel.AlignHorizontalCenterWithPanel="True"
-            RelativePanel.Below="tbDeviseMontant" />
+            RelativePanel.Below="tbDeviseMontant"
+            Text="{Binding TxDevises}" />
 
 
     </RelativePanel>
