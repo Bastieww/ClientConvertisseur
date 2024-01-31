@@ -1,4 +1,4 @@
-﻿using ClientConvertisseurV1.Models;
+﻿using ClientConvertisseurV2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Globalization;
 
-namespace ClientConvertisseurV1.Services
+namespace ClientConvertisseurV2.Services
 {
     public class WSService : IService
     {

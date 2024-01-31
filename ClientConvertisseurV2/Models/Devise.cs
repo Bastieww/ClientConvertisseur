@@ -2,7 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.ComponentModel.DataAnnotations;
 
-namespace ClientConvertisseurV1.Models
+namespace ClientConvertisseurV2.Models
 {
     public class Devise
     {
@@ -26,6 +26,11 @@ namespace ClientConvertisseurV1.Models
                    Id == devise.Id &&
                    NomDevise == devise.NomDevise &&
                    Taux == devise.Taux;
+        }
+
+        public override string ToString()
+        {
+            return this.NomDevise;
         }
     }
 }
